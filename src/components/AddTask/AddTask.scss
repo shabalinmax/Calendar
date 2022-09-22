@@ -1,0 +1,35 @@
+.setTask {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #bbb;
+  border-radius: 20px;
+  min-width: 200px;
+  min-height: 200px;
+  box-shadow: 1px 1px 6px 6px #bbbbbb;
+  .input {
+    display: flex;
+    //height: 30%;
+    align-items: center;
+    input {
+      width: 50%;
+      height: 30%;
+      margin-left: 20px;
+      border-radius: 10px;
+    }
+    button {
+      margin-left: 20px;
+
+      font-size: 26px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: none;
+      background-color: #fff;
+
+    }
+  }
+  .setTaskDescription {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+  }
+}

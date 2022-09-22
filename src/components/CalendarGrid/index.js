@@ -1,9 +1,14 @@
 import React from 'react';
 import './CalendarGrid.css'
 import moment from "moment";
+import AddTask from "../AddTask";
+
 const CalendarGrid = ({startDay, onClickBack}) => {
     const day = startDay.clone()
-    const daysArray = [...Array(42)].map(() => day.add(1, 'day').clone())
+    let daysArray = []
+    for (let i = 0; i < 42 ; i++) {
+        daysArray[i] = day.add('1', 'day').clone()
+    }
     const daysOfWeek = [
         {
             name: 'Monday'
@@ -28,15 +33,14 @@ const CalendarGrid = ({startDay, onClickBack}) => {
         },
 
     ]
-    let valueOfCurrentMouth =  +startDay.format('MM') + 1
-    let valueOfCurrentYear = startDay.format('yyyy')
     for (let i = 0; i < daysOfWeek.length ; i++) {
         daysOfWeek[i].id = i
     }
-
-    // React.useEffect(() => {
-    //     setIsPressBtn(false)
-    // }, [isPressBtn])
+    let valueOfCurrentMouth =  +startDay.format('MM')
+    let valueOfCurrentYear = startDay.format('yyyy')
+    const onClickDate = (date) => {
+        console.log(date)
+    }
 
     return (
         <div>
@@ -63,17 +67,17 @@ const CalendarGrid = ({startDay, onClickBack}) => {
                 </div>
                 )}
             </div>
+            <AddTask/>
             <div className={'calendarWrapper'}>
-
                 {daysArray.map((el) =>
                     <div
+                        onClick={() => onClickDate(el) }
                         key={el}
                         className={'cellWrapper'}
                         style={[6,7].includes(el.isoWeekday()) ? {background: '#ececec'} : {background: ''}}>
-                        <div className="day"
+                        <div  className="day"
                              style={(moment().isAfter(el) ? {color : '#b8b8b8'} : {})}>
                             {el.format('D')}
-
                         </div>
                     </div>
                 )}

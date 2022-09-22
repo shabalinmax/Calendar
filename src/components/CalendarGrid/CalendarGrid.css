@@ -1,0 +1,75 @@
+.controls {
+  display: flex;
+}
+.controls .back {
+  display: flex;
+  border: 2px solid #D6D6D6;
+  min-width: 30px;
+  min-height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.controls .forward {
+  margin-left: 4px;
+  display: flex;
+  border: 2px solid #D6D6D6;
+  min-width: 30px;
+  min-height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.nameAndYearOfCurrentMouth {
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+}
+.nameAndYearOfCurrentMouth span:not(:first-child) {
+  margin-left: 10px;
+}
+
+.daysOfWeek {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . . . . . .";
+}
+.daysOfWeek .dayOfWeek {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 10px;
+}
+
+.calendarWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . . . . . .";
+}
+.calendarWrapper .cellWrapper {
+  min-height: 80px;
+  min-width: 100px;
+  background-color: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  display: flex;
+  justify-content: flex-end;
+}
+.calendarWrapper .cellWrapper:hover {
+  font-size: 30px;
+}
+.calendarWrapper .cellWrapper .day {
+  -webkit-transition: 0.5s ease;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+  padding-top: 5px;
+}
+
+/*# sourceMappingURL=CalendarGrid.css.map */

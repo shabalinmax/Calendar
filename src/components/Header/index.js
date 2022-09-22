@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Monitor = () => {
+const Header = () => {
     return (
         <div>
-            Monitor
+            Header
         </div>
     );
 };
 
-export default Monitor;
+export default Header;
